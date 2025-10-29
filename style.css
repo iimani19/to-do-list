@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(Images/coffee.png);
+    font-family: "Dekko", cursive;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.todo-app h1{
+    font-size: 2rem;
+    color: #F8F4E1;
+}
+
+.input-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.input-area input{
+    flex:1;
+    padding: 10px 17px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    background: #74512D;
+    color: #F8F4E1;
+    box-shadow:  0 0 3px 2px#543310;
+}
+
+.input-area input::placeholder{
+    color: #F8F4E1;
+    font-family: "Shanti", sans-serif;
+}
+
+.input-area button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 50%;
+    color: #F8F4E1;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0 0 3px 2px #543310;
+    background:#74512D ;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.input-area button:hover{
+    transform: scale(1.1);
+    background: #AF8F6F;
+}
+
+.todos-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#task-list{
+    width:100% ;
+}
+
+#task-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #74512D;
+    margin-bottom: 10px;
+    padding:  8px 10px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #F8F4E1;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+    font-family: "Dekko", cursive;
+    
+}
+
+#task-list li.checkbox{
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid beige;
+    background: transparent;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#task-list li.checkbox:checked{
+    background-color: lightcoral;
+    transform: all 0.2s ease;
+}
+
+#task-list li.checkbox:checked::before{
+    content: '\2713';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+#task-list li span{
+    flex: 1;
+    margin-left: 10px;
+    word-wrap: break-word;
+    font-family: "Dekko", cursive;
+}
+
+.task-btns{
+    display: flex;
+    gap:  10px;
+    margin-right: auto;
+}
+
+.task-btns button {
+    background: #000;
+    border : none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: aliceblue;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-btns button:hover{
+    transform: scale(1.2);
+}
+
+.task-btns .delete-btn{
+    background: #AF8F6F;
+}
+
+.completed span{
+    text-decoration: line-through;
+    color: #543310;
+    font-family: "Dekko", cursive;
+}
+
+.checkbox {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #AF8F6F;
+    border-radius: 4px;
+}
+
+.checkbox:checked {
+    color: #543310;
+}
+
+.checkbox:checked::after{
+    content: "";
+    position: absolute;
+    left: 15.5px;
+    top: 18px;
+    width: 3px;
+     height: 5px;
+    border: solid #543310;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
